@@ -16,5 +16,5 @@
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
   },
-  "postCreateCommand": "terraform init"
+  "postCreateCommand": "apt-get update && apt-get install -y awscli && terraform init"
 }
