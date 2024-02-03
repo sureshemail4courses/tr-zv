@@ -1,16 +1,13 @@
-{
-  "name": "My DevOps Environment",  
-  "image": "mcr.microsoft.com/vscode/devcontainers/universal:latest",
-  "overrideCommand": false,
-  "extensions": [
-      "ms-kubernetes-tools.vscode-kubernetes-tools",
-      "hashicorp.terraform",
-      "yzhang.markdown-all-in-one",
-      "ms-vscode.vscode-typescript-tslint-plugin",
-      "esbenp.prettier-vscode",
-      "amazonwebservices.aws-toolkit-vscode"
-  ],
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y awscli && curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add - && sudo apt-add-repository \"deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main\" && sudo apt-get update && sudo apt-get install terraform vault",
-  "remoteUser": "vscode"
+"name": "suresh-devops-devcontainer",
+"image": "mcr.microsoft.com/devcontainers/base:ubuntu",  // Any generic, debian-based image.
+"features": {
+    "ghcr.io/devcontainers/features/aws-cli:1": {},
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+   "ghcr.io/devcontainers/features/git:1": {},
+   "ghcr.io/devcontainers/features/python:1": {},
+   "ghcr.io/devcontainers/features/terraform:1": {}
+    "ghcr.io/devcontainers/features/docker-in-docker:1": {
+        "version": "latest",
+        "moby": true
+    }
 }
-
