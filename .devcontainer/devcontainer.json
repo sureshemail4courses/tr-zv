@@ -1,9 +1,7 @@
 {
   "name": "My DevOps Environment",  
   "image": "mcr.microsoft.com/vscode/devcontainers/universal:latest",
-  "settings": { 
-      "terminal.integrated.shell.linux": "/bin/bash"
-  },
+  "overrideCommand": false,
   "extensions": [
       "ms-kubernetes-tools.vscode-kubernetes-tools",
       "hashicorp.terraform",
