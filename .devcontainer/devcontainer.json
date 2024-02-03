@@ -1,0 +1,12 @@
+{
+    "name": "Terraform Codespace",
+    "image": "hashicorp/terraform:latest",
+    "extensions": [
+      "hashicorp.terraform"
+    ],
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "postCreateCommand": "terraform init"
+  }
+  
