@@ -1,6 +1,6 @@
 {
-  "name": "My DevOps Environment",
-  "image": "mcr.microsoft.com/vscode/devcontainers/universal:linux",
+  "name": "My DevOps Environment",  
+  "image": "mcr.microsoft.com/vscode/devcontainers/universal:latest",
   "settings": { 
       "terminal.integrated.shell.linux": "/bin/bash"
   },
