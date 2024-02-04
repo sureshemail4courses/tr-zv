@@ -1,13 +1,16 @@
-"name": "suresh-devops-devcontainer",
-"image": "mcr.microsoft.com/devcontainers/base:ubuntu",  // Any generic, debian-based image.
-"features": {
-    "ghcr.io/devcontainers/features/aws-cli:1": {},
-    "ghcr.io/devcontainers/features/common-utils:2": {},
-   "ghcr.io/devcontainers/features/git:1": {},
-   "ghcr.io/devcontainers/features/python:1": {},
-   "ghcr.io/devcontainers/features/terraform:1": {}
-    "ghcr.io/devcontainers/features/docker-in-docker:1": {
-        "version": "latest",
-        "moby": true
+{
+    // Name this configuration
+    "name": "SureshDevOpsCodespace",
+    // Use the base codespace image
+    "image": "mcr.microsoft.com/vscode/devcontainers/universal:latest",
+  
+    "remoteUser": "codespace",
+    "overrideCommand": false
+    ,
+    // Add the IDs of extensions you want installed when the container is created.
+    "customizations": {
+        
     }
-}
+    
+    //"postCreateCommand": "echo '# Writing code upon codespace creation!'  >> codespace.md"
+  }
