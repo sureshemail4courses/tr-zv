@@ -1,16 +1,27 @@
 {
-    // Name this configuration
-    "name": "SureshDevOpsCodespace",
-    // Use the base codespace image
-    "image": "mcr.microsoft.com/vscode/devcontainers/universal:latest",
-  
-    "remoteUser": "codespace",
-    "overrideCommand": false
-    ,
-    // Add the IDs of extensions you want installed when the container is created.
-    "customizations": {
-        
+  // Name this configuration
+  "name": "SureshDevOpsCodespace",
+  // Use the base codespace image
+  "image": "mcr.microsoft.com/vscode/devcontainers/universal:latest",
+
+  "remoteUser": "codespace",
+  "overrideCommand": false,
+
+  // Add the IDs of extensions you want installed when the container is created.
+  "customizations": {
+    // Install required software using apt-get
+    "apt": {
+      "packages": [
+        "docker.io",
+        "kubectl",
+        "terraform",
+        "git",
+        "awscli",
+        "python3.9",
+        "helm3"  
+      ]
     }
-    
-    //"postCreateCommand": "echo '# Writing code upon codespace creation!'  >> codespace.md"
+    // If necessary, enable shell scripts for post-creation actions
+    // "postCreateCommand": "bash /path/to/setup-script.sh"
   }
+}
